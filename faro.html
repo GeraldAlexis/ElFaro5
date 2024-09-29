@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Faro</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <div class="container">
+        <div class="avisos bg-warning text-dark text-center p-2">
+            <h5>¡Nuevas noticias disponibles todos los días!</h5>
+        </div>
+        <div class="header row d-flex mt-0 align-items-center text-center">
+            <div class="col-2">
+                <img src="Imagenes/Logo.jpg" class="img-fluid float-start" alt="">
+            </div>
+            <div class="col-8 align-items-center">
+                <h1>El Faro</h1>
+                <h5>Mantente informado</h5>
+            </div>
+            <div id="FyH" class="FyH col-2 text-white text-center p-2 bg-secondary rounded-3 shadow-sm"></div>
+        </div>
+       
+        <div class="menu row g-0 d-flex justify-content-end p-1 " role="group" aria-label="Basic outlined example">
+            <div class="col-auto m-1"><a href="faro.html"type="button" class="btn btn-outline-dark w-100">Inicio</a></div>
+            <div class="col-auto m-1"><a href="deportes.html"type="button" class="btn btn-outline-dark  w-100">Deportes</a></div>
+            <div class="col-auto m-1"><a href="negocios.html"type="button" class="btn btn-outline-dark w-100">Negocios</a></div>
+           
+        </div>
+        <div class="principal row">
+            <div class="noticias col-md-9 col-12">
+                <div id="carouselExampleCaptions" class="carousel slide h-100">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner h-100">
+                        <div class="carousel-item h-100 active">
+                            <img src="Imagenes/noticia1.webp" class="d-block w-100 h-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Detienen a pareja que circulaba con auto robado y medio kilo de drogas en Collipulli</h5>
+                                <p>Policial</p>
+                            </div>
+                            <div class="overlay d-none justify-content-center align-items-center">
+                                <h5>
+                                    En un control vehicular realizado en la Ruta 5 Sur, Carabineros del Retén Esperanza detuvo a una pareja que circulaba en un vehículo robado, portando cerca de medio kilo de diversas drogas. En concreto, de acuerdo a información policial, la captura de los sujetos se registró en la comuna de Collipulli, en la región de La Araucanía.
+                                </h5>
+                            </div>
+                        </div>
+                        <div class="carousel-item h-100">
+                            <img src="Imagenes/noticia2.jpg" class="d-block w-100 h-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Qué significa la Alerta Sanitaria en Chile por la Viruela del Mono</h5>
+                                <p>Salud</p>
+                            </div>
+                            <div class="overlay d-none justify-content-center align-items-center">
+                                <h5>El Ministerio de Salud (Minsal) de Chile anunció la emisión de una Alerta Sanitaria en todo el país, de manera preventiva por el aumento de casos del virus de la Viruela del Mono alrededor del mundo.</h5>
+                            </div>
+                        </div>
+                        <div class="carousel-item h-100">
+                            <img src="Imagenes/noticia3.jpeg" class="d-block w-100 h-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>¿Sube o baja el precio de la bencina? Esto dijo ENAP hoy</h5>
+                                <p>Dinero</p>
+                            </div>
+                            <div class="overlay d-none justify-content-center align-items-center">
+                                <h5>De acuerdo a la información publicada por ENAP el día de hoy, el único combustible en variar su valor esta semana fue la parafina-kerosene, bajando en $10,2 pesos por litro.</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+                
+            </div>
+            <div id="sidebar"class="btnagregar col-md-3 col-12 pt-3">
+                <button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modalAgregarNoticia">Agregar Noticia</button>
+                <div class="card mt-3 "></div>
+                    
+                    <ul id="listaNoticias"class="list-group list-group-flush  ">
+                        <div class="card-header bg-secondary text-white p-1 text-center">
+                            Noticias Recientes
+                        </div>
+                    </ul>
+                </div>
+            </div>
+            <div class="modal fade " id="modalAgregarNoticia" tabindex="-1" aria-labelledby="modalAgregarNoticiaLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modalAgregarNoticiaLabel">Agregar Nueva Noticia</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form id="formAgregarNoticia">
+                                <div class="mb-3">
+                                    <label for="titulo" class="form-label">Título</label>
+                                    <input type="text" class="form-control" id="titulo" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="categoria" class="form-label">Categoria</label>
+                                    <input type="text" class="form-control" id="categoria" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="descripcion" class="form-label">Descripción</label>
+                                    <textarea class="form-control" id="descripcion" rows="3" required></textarea>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="imagen" class="form-label">Imagen</label>
+                                    <input type="file" class="form-control" id="imagen" accept="image/*" required>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Agregar</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+      
+            </div>  
+            <div class="footer d-flex bg-secondary h-auto p-4">
+                <div class="rs d-flex">
+                    <div class="derechos align-self-center ms-5">
+                        <div>
+                            <h5>Pagina creada con bootstrap por Gerald Acevedo</h5>
+                        </div>
+                        <div class="btn btn-light">
+                            <a href="#">
+                                <img src="Imagenes/facebook.png" alt="Facebook">
+                            </a>
+                        </div>
+                        <div class="btn btn-light">
+                            <a href="#">
+                                <img src="Imagenes/youtube.png" alt="Youtube">
+                            </a>
+                        </div>
+                        <div class="btn btn-light">
+                            <a href="#">
+                                <img src="Imagenes/twitter.png" alt="twitter">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="contacto d-flex flex-column gap-3 align-self-end ms-auto justify-content-between">
+                    <div>
+                        <input class="form-control form-control-lg" type="text" placeholder="Nombre: " aria-label=".form-control-lg example">
+                    </div>
+                    <div>   
+                        <input class="form-control" type="text" placeholder="Correo: " aria-label="default input example">
+                    </div>     
+                    <div>
+                        <input class="form-control form-control-sm" type="text" placeholder="Mensaje: " aria-label=".form-control-sm example">
+                    </div>
+                    <div>
+                        <button type="submit" class="btn btn-light mt-3">Enviar</button>
+                    </div>    
+                </div>
+        </div>      
+    </div>
+        
+    
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script>
+        function fechaHora() {
+            const ahora = new Date();
+            const fecha = ahora.toLocaleDateString();
+            const hora = ahora.toLocaleTimeString();
+            document.getElementById('FyH').textContent = `${fecha} ${hora}`;
+        }
+    
+        fechaHora();
+        setInterval(fechaHora, 1000); 
+    
+        document.getElementById('carouselExampleCaptions').addEventListener('click', function (event) {
+            const item = event.target.closest('.carousel-item');
+            if (item) {
+                const overlay = item.querySelector('.overlay');
+                overlay.classList.toggle('d-none');
+            }
+        });
+    
+        document.getElementById('formAgregarNoticia').addEventListener('submit', function(event) {
+            event.preventDefault();
+    
+            const titulo = document.getElementById('titulo').value;
+            const categoria = document.getElementById('categoria').value;
+            const descripcion = document.getElementById('descripcion').value;
+            const imagenInput = document.getElementById('imagen');
+    
+            const file = imagenInput.files[0];
+            const reader = new FileReader();
+            const form = this;
+    
+            reader.onloadend = function() {
+                const nuevaNoticia = `
+                    <div class="carousel-item">
+                        <img src="${reader.result}" class="d-block w-100" alt="${titulo}">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>${titulo}</h5>
+                            <p>${categoria}</p>
+                        </div>
+                        <div class="overlay d-none">
+                            <h5>${descripcion}</h5>
+                        </div>
+                    </div>
+                `;
+    
+             
+                const carouselInner = document.querySelector('.carousel-inner');
+                carouselInner.insertAdjacentHTML('beforeend', nuevaNoticia);
+    
+                
+                form.reset();
+                const modal = bootstrap.Modal.getInstance(document.getElementById('modalAgregarNoticia'));
+                modal.hide();
+                const items = carouselInner.querySelectorAll('.carousel-item');
+                items.forEach(item => item.classList.remove('active')); 
+                items[items.length - 1].classList.add('active');
+            };
+    
+           
+            reader.readAsDataURL(file);
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const noticiasNegocios = [
+                {titulo: 'SQM sigue sufriendo los menores precios del litio...', url:'negocios.html#noticia2'},
+                {titulo: 'Wall Street cerró en verde...', url:'negocios.html#noticia3'}
+                
+            ];
+            const noticiasDeportes = [
+                {titulo: 'Massú y González celebran dos décadas de su hazaña...', url:'deportes.html#noticia2'},
+                {titulo: 'Floyd Mayweather vs. John Gotti III...', url:'deportes.html#noticia3'}
+                
+            ];
+
+            function agregarSidebar() {
+                const listaNoticias = document.getElementById('listaNoticias');
+                noticiasDeportes.forEach(noticia => {
+                    const li = document.createElement('li');
+                    li.classList.add('list-group-item', 'border', 'border-secundary-subtle', 'rounde-3');
+                    li.innerHTML = `<a href="${noticia.url}" class="text-decoration-none text-dark">${noticia.titulo}</a>`;
+                    listaNoticias.appendChild(li);
+                });
+                noticiasNegocios.forEach(noticia => {
+                    const li = document.createElement('li');
+                    li.classList.add('list-group-item', 'border', 'border-secondary-subtle', 'rounded-3');
+                    li.innerHTML = `<a href="${noticia.url}" class="text-decoration-none text-dark">${noticia.titulo}</a>`;
+                    listaNoticias.appendChild(li);
+                });
+            }
+            agregarSidebar();
+        });
+        
+    
+
+        
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>  
+    
+   
+   
+</body>
+</html>

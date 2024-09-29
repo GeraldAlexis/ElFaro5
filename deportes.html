@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Faro</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="estilo.css">
+    <style>
+        .descripcion {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+      <div class="container">
+        
+        <div class="header row d-flex mt-0 align-items-center text-center">
+            <div class="col-2">
+                <img src="Imagenes/Logo.jpg" class="img-fluid float-start" alt="">
+            </div>
+            <div class="col-8 align-items-center">
+                <h1>El Faro</h1>
+                <h5>Mantente informado</h5>
+            </div>
+            <div id="FyH" class="FyH col-2 text-white text-center p-2 bg-secondary rounded-3 shadow-sm"></div>
+        </div>
+        <div class="menu row g-0 d-flex justify-content-end p-1 " role="group" aria-label="Basic outlined example">
+            <div class="col-auto m-1"><a href="faro.html"type="button" class="btn btn-outline-dark w-100">Inicio</a></div>
+            <div class="col-auto m-1"><a href="deportes.html"type="button" class="btn btn-outline-dark  w-100">Deportes</a></div>
+            <div class="col-auto m-1"><a href="negocios.html"type="button" class="btn btn-outline-dark w-100">Negocios</a></div>
+        </div>
+
+        <div class="Principal mt-4">
+
+            <h1 class="text-center mb-4">Deportes</h1>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="Imagenes/massu-gonzalez.png" class="card-img-top img-fluid" alt="Noticia 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Massú y González celebran dos décadas de su hazaña olímpica con nueva victoria ante mismos rivales</h5>
+                            <p class="card-text">Tennis.</p>
+                            <button class="btn btn-primary" onclick="toggleDescription('desc1')">Leer más</button>
+                            <div class="descripcion" id="desc1">
+                                <p>Los tenistas chilenos Nicolás Massú y Fernando González reeditaron este martes sus triunfos de hace 20 años ante los norteamericanos Mardy Fish y Taylor Dent, en partidos de exhibición para conmemorar sus medallas olímpicas en Atenas 2004.
+                                    Los partidos, disputados en el Movistar Arena de Santiago, recordaron las dos medallas de oro conseguidas por Massú en sencillos y en dobles junto a González, quien también obtuvo el bronce en esos Juegos Olímpicos.
+                                    Massú se impuso a Fish esta vez por 4-6, 6-2, con un tie break 10-5, mientras que su triunfo en Atenas fue en cinco sets de 6-3, 3-6, 2-6, 6-3 y 6-4.
+                                    González le ganó Dent con un doble 6-3 este martes, pero hace 20 años los hizo en tres sets por 6-4, 2-6, 16-14.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="Imagenes/laroja.avif" class="card-img-top img-fluid" alt="Noticia 2">
+                        <div class="card-body">
+                            <h5 class="card-title">La Roja pierde un titular para Eliminatorias: grave lesión</h5>
+                            <p class="card-text">Fútbol.</p>
+                            <button class="btn btn-primary" onclick="toggleDescription('desc2')">Leer más</button>
+                            <div class="descripcion" id="desc2">
+                                <p>La Roja sufrió una importante baja para la doble fecha eliminatoria ante Argentina y Bolivia, a inicios de septiembre. Igor Lichnovsky no podrá ser convocado debido a una lesión: según anunció el Club América, el zaguero será “sometido a una intervención quirúrgica de plástica de ligamento cruzado anterior de la rodilla derecha”.
+                                    La propia institución informó que aún no está claro el tiempo de recuperación, ya que éste corresponderá “a su evolución”. Sin embargo, el medio mexicano Récord señaló que estaría de baja un mes y medio, aproximadamente.                                    
+                                    El anuncio es sorpresivo, porque el zaguero jugó el sábado pasado en el duelo de las Águilas y Colorado Rapids, por la Leagues Cup, donde finalizó el encuentro e, incluso, pateó un penal en la tanda decisiva. Ahora, Lichnovsky deberá ceder su lugar en la titularidad de la Roja.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="Imagenes/boxeo.jpeg" class="card-img-top img img-fluid" alt="Noticia 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Floyd Mayweather vs. John Gotti III: Fecha, transmisión y cartelera del evento de boxeo</h5>
+                            <p class="card-text">Boxeo.</p>
+                            <button class="btn btn-primary" onclick="toggleDescription('desc3')">Leer más</button>
+                            <div class="descripcion" id="desc3">
+                                <p>"Money" regresa a la acción en CDMX enfrentándose a John Gotti III en un evento de exhibición.
+                                    Este sábado se viene una increíble velada de boxeo desde Ciudad de México, ya que uno de los campeones más importantes del último tiempo volverá a subirse al cuadrilátero, se trata de Floyd Mayweather Jr, excampeón mundial de boxeo, quien enfrentará nuevamente a John Gotti III, reconocido por ser nieto del famoso mafioso estadounidense del mismo nombre.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer d-flex bg-secondary h-auto p-4">
+            <div class="rs d-flex">
+                <div class="derechos align-self-center ms-5">
+                    <div>
+                        <h5>Página creada con Bootstrap por Gerald Acevedo</h5>
+                    </div>
+                    <div class="btn btn-light">
+                        <a href="#">
+                            <img src="Imagenes/facebook.png" alt="Facebook">
+                        </a>
+                    </div>
+                    <div class="btn btn-light">
+                        <a href="#">
+                            <img src="Imagenes/youtube.png" alt="Youtube">
+                        </a>
+                    </div>
+                    <div class="btn btn-light">
+                        <a href="#">
+                            <img src="Imagenes/twitter.png" alt="Twitter">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="contacto d-flex flex-column gap-3 align-self-end ms-auto justify-content-between">
+                <div>
+                    <input class="form-control form-control-lg" type="text" placeholder="Nombre: " aria-label=".form-control-lg example">
+                </div>
+                <div>
+                    <input class="form-control" type="text" placeholder="Correo: " aria-label="default input example">
+                </div>
+                <div>
+                    <input class="form-control form-control-sm" type="text" placeholder="Mensaje: " aria-label=".form-control-sm example">
+                </div>
+                <div>
+                    <button type="submit" class="btn btn-light mt-3">Enviar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script>
+        function fechaHora() {
+            const ahora = new Date();
+            const fecha = ahora.toLocaleDateString();
+            const hora = ahora.toLocaleTimeString();
+            document.getElementById('FyH').textContent = `${fecha} ${hora}`;
+        }
+
+        fechaHora();
+        setInterval(fechaHora, 1000);
+        
+        function toggleDescription(descId) {
+            const descripcion = $('#' + descId);
+            descripcion.slideToggle(300);
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.6/dist/umd/popper.min.js"></script>
+      
+</body>
+</html>

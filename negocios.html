@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Faro</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="estilo.css">
+    <style>
+        .descripcion {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+      <div class="container">
+        
+        <div class="header row d-flex mt-0 align-items-center text-center">
+            <div class="col-2">
+                <img src="Imagenes/Logo.jpg" class="img-fluid float-start" alt="">
+            </div>
+            <div class="col-8 align-items-center">
+                <h1>El Faro</h1>
+                <h5>Mantente informado</h5>
+            </div>
+            <div id="FyH" class="FyH col-2 text-white text-center p-2 bg-secondary rounded-3 shadow-sm"></div>
+        </div>
+        <div class="menu row g-0 d-flex justify-content-end p-1 " role="group" aria-label="Basic outlined example">
+            <div class="col-auto m-1"><a href="faro.html"type="button" class="btn btn-outline-dark w-100">Inicio</a></div>
+            <div class="col-auto m-1"><a href="deportes.html"type="button" class="btn btn-outline-dark  w-100">Deportes</a></div>
+            <div class="col-auto m-1"><a href="negocios.html"type="button" class="btn btn-outline-dark w-100">Negocios</a></div>
+        </div>
+
+        <div class="Principal mt-4">
+            <h1 class="text-center mb-4">Negocios</h1>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="Imagenes/negocio1.jpg" class="card-img-top img-fluid" alt="Noticia 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Empresa griega inauguró nueva planta fotovoltaica en Chile</h5>
+                            <p class="card-text">Negocios</p>
+                            <button class="btn btn-primary" onclick="toggleDescription('desc1')">Leer más</button>
+                            <div class="descripcion" id="desc1">
+                                <p>La empresa griega Metlen Energy & Metals inauguró su segundo parque fotovoltaico en la Región de Coquimbo, con una potencia de 90 megavatios de energía limpia, que evitará unas 80 mil toneladas anuales de emisiones de dióxido de carbono.
+                                    Según detalló este martes el diario griego Kathimerini, la nueva planta, "Doña Antonia", con una inversión de 65 millones de dólares, cuenta con 151 mil 920 paneles localizados en la ciudad de Ovalle.                                    
+                                    "Generará energía equivalente al consumo anual de más de 85.000 hogares", destacó la compañía griega en un comunicado</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="Imagenes/negocio2.jpg" class="card-img-top img-fluid" alt="Noticia 2">
+                        <div class="card-body">
+                            <h5 class="card-title">SQM sigue sufriendo los menores precios del litio: anotó pérdidas por más de US$600 millones</h5>
+                            <p class="card-text">Negocios</p>
+                            <button class="btn btn-primary" onclick="toggleDescription('desc2')">Leer más</button>
+                            <div class="descripcion" id="desc2">
+                                <p>Los menores precios del litio siguen pasando la cuenta a SQM, quien reportó pérdidas en los primeros seis meses del 2024.
+                                    Al 30 de junio, la minera no metálica tuvo ingresos por US$2.378 millones versus US$4.315,6 millones del mismo período del año anterior. Las pérdidas alcanzaron los US$655,9 millones.                                    
+                                    Sin embargo, al segundo trimestre, SQM si pudo conseguir una ganancia de US$213,6 millones, lejos de los US$580,2 millones obtenidos en el segundo trimestre del 2023.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="Imagenes/negocio3.jpg" class="card-img-top img img-fluid" alt="Noticia 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Wall Street cerró en verde con los inversores esperanzados por un recorte de tipos en septiembre</h5>
+                            <p class="card-text">Negocios.</p>
+                            <button class="btn btn-primary" onclick="toggleDescription('desc3')">Leer más</button>
+                            <div class="descripcion" id="desc3">
+                                <p>Wall Street cerró este miércoles en verde y su principal indicador, el Dow Jones de Industriales, subió un 0,14% tras conocerse datos que refuerzan la perspectiva de un recorte de los tipos de interés en Estados Unidos en septiembre.
+                                    Al toque de la campana, el Dow Jones se situó en 40.890 puntos; el S&P 500 avanzó un 0,42%, hasta 5.620 unidades, y el Nasdaq sumó un 0,57%, hasta 17.918 enteros.                                    
+                                    Este miércoles se publicaron las actas de la reunión de julio del Comité Federal de Mercado Abierto (FOMC) de la Reserva Federal (Fed), que sugieren que el cambio de ciclo en política monetaria comenzará en septiembre con una primera bajada de los tipos.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer d-flex bg-secondary h-auto p-4">
+            <div class="rs d-flex">
+                <div class="derechos align-self-center ms-5">
+                    <div>
+                        <h5>Página creada con Bootstrap por Gerald Acevedo</h5>
+                    </div>
+                    <div class="btn btn-light">
+                        <a href="#">
+                            <img src="Imagenes/facebook.png" alt="Facebook">
+                        </a>
+                    </div>
+                    <div class="btn btn-light">
+                        <a href="#">
+                            <img src="Imagenes/youtube.png" alt="Youtube">
+                        </a>
+                    </div>
+                    <div class="btn btn-light">
+                        <a href="#">
+                            <img src="Imagenes/twitter.png" alt="Twitter">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="contacto d-flex flex-column gap-3 align-self-end ms-auto justify-content-between">
+                <div>
+                    <input class="form-control form-control-lg" type="text" placeholder="Nombre: " aria-label=".form-control-lg example">
+                </div>
+                <div>
+                    <input class="form-control" type="text" placeholder="Correo: " aria-label="default input example">
+                </div>
+                <div>
+                    <input class="form-control form-control-sm" type="text" placeholder="Mensaje: " aria-label=".form-control-sm example">
+                </div>
+                <div>
+                    <button type="submit" class="btn btn-light mt-3">Enviar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script>
+        function fechaHora() {
+            const ahora = new Date();
+            const fecha = ahora.toLocaleDateString();
+            const hora = ahora.toLocaleTimeString();
+            document.getElementById('FyH').textContent = `${fecha} ${hora}`;
+        }
+
+        fechaHora();
+        setInterval(fechaHora, 1000);
+        
+        function toggleDescription(descId) {
+            const descripcion = $('#' + descId);
+            descripcion.slideToggle(300);
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.6/dist/umd/popper.min.js"></script>
+      
+</body>
+</html>
